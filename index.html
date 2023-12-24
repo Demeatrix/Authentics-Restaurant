@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Authentics - The realness of Flavours</title>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="" type="image/svg+xml" />
 
     <!--
         Fonts
     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet"
     />
 
     <!--
         style sheet
       -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css" />
 
     <!--
@@ -40,6 +44,8 @@
     />
   </head>
   <body>
+
+
     <!--
         Preload
     -->
@@ -52,76 +58,110 @@
     <!--
         Header
     -->
+    <section class="header">
+      <a href="#" class="logo"><i class="fas fa-utensils">Authentics</i></a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#food">Special Food</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
 
-    <header class="header" data- header>
-      <div class="container">
 
+  <!-------------------------------------------------------------------
+  Home Main Section
+  --------------------------------------------------------------------->
 
-        <nav class="navbar" data-navbar>
+  <div class="top-text">
+    <h2>Explore Exquisite Dining Moments Awaiting You!</h2>
+  </div>
 
-          <button class="close-btn" aria-label="close menu" data-nav-toggler>
-            <ion icon name = "close-outline aria-hidden = "true"> </ion icon>
-          </button>
+  <section class = "Home" id = "home">
+    <div class=" swiper container home-slider">
+      <div class="swiper-wrapper wrapper">
 
-          <a href="#" class="logo">
-            <img src="/" alt="" />
-          </a>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="#Home" class="navbar-link hover-underline active">
-                <div class="space"></div>
-                <span class="content-item">Home</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Menu" class="navbar-link hover-underline active">
-                <div class="space"></div>
-                <span class="content-item">Menu</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#About-us" class="navbar-link hover-underline active">
-                <div class="space"></div>
-                <span class="content-item">About Us</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Contact-us" class="navbar-link hover-underline active">
-                <div class="space"></div>
-                <span class="content-item">Contact us</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Timing" class="navbar-link hover-underline active">
-                <div class="space"></div>
-                <span class="content-item">Testimonials</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="text-center">
-            <div class="seperate"></div>
+        <div class="swiper-slide slider">
+          <div class="content">
+           <h2>Intimate Bliss: A Cozy Nook for Two</h2>
+              <p>Beautifully placed corner with soaking midnight lights and soothy music</p>
+            <!-- <a href="#" class = "btn">Book Now</a> -->
           </div>
-        </nav>
+          <div class="image">
+            <img src="Assets-Auntentics/assets/images/Couple-Dine.avif" alt="" class = "photo1">
+          </div>
+        </div>
 
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-        </button>
-        
+        <div class="swiper-slide slider">
+          <div class="content">
+           <h2>Huddle in Elegance: Benched with Sparkles for Your Group's Delight</h2>
+              <p> Hazed with lighting and games for your Groups Dines</p>
+            <!-- <a href="#" class = "btn">Book Now</a> -->
+          </div>
+          <div class="image">
+            <img src="Assets-Auntentics/assets/images/Group-Dine.jpg" alt="" class = "photo2">
+          </div>
+        </div>
+
+        <div class="swiper-slide slider">
+          <div class="content">
+           <h2>A Tranquil Haven for Family Gatherings: Mindful Space for Your Dining Delight</h2>
+              <p>A spacious side with no disturbance to enjoy the night with  family</p>
+            <!-- <a href="#" class = "btn">Book Now</a> -->
+          </div>
+          <div class="image">
+            <img src="Assets-Auntentics/assets/images/Family-Dine.jpg" alt="" class = "       photo3">
+          </div>
+        </div>
 
       </div>
-    </header>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-    <!--
+
+  <!-------------------------------------------------------------------
+    Cuisines Scroll
+  -------------------------------------------------------------------->
+  <div class="card-container">
+      <div class="cuisines" >
+        <div class="info">
+          <h3>Indian Cuisines</h3>
+          <img src="/Assets-Auntentics/assets/images/Indian-Cuisine-Fifth-Best-In-The-World.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="cuisines">
+        <div class="info">
+          <h3>American Cuisines</h3>
+          <img src="/Assets-Auntentics/assets/images/american-cuisines.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="cuisines">
+        <div class="info">
+          <h3>Chinese Cuisines</h3>
+          <img src="/Assets-Auntentics/assets/images/chinese-cuisine-chef-pom-1024x640.png" alt="">
+        </div>
+      </div>
+
+      <div class="cuisines">
+        <div class="info">
+          <h3>Italian Cuisines</h3>
+          <img src="/Assets-Auntentics/assets/images/italian-cuisines.jpg" alt="">
+        </div>
+    </div>
+
+  </div>
+
+
+    <!-----------------------------------------------------------------
         Script
-    -->
+    ------------------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
     <script
