@@ -1,0 +1,353 @@
+:root {
+  --peru: #cd9452;
+  --black: #222;
+  --white: #fff;
+  --light-black: #666;
+  --light-white: #ccc;
+  --light-bg: #f5f5f5;
+  --dark-bg: rgba(0, 0, 0, 0.7);
+  --border: 0.4rem solid #aaa;
+  /* --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
+  --box-shadow: 20px 20px 60px #96363641, inset -20px -20px 60px #ffffff40;
+}
+
+* {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  border-width: 4px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--peru);
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  font-size: 2.5rem;
+  color: var(--peru);
+}
+
+.heading h3 {
+  font-size: 4.5rem;
+  color: var(--black);
+}
+.header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  /* position: sticky; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header .logo {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+.header .logo i {
+  color: var(--peru);
+  padding-right: 0.5rem;
+}
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: var(--light-black);
+}
+.header .navbar a:hover {
+  color: var(--peru);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 3rem 2rem;
+  }
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+}
+
+.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .image {
+  flex: 1 1 41rem;
+}
+
+.about .image img {
+  width: 100%;
+}
+
+.about .content {
+  flex: 1 1 41rem;
+}
+
+.about .content .title {
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  color: var(--light-black);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.about .content .icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about .content .icons-container .icons {
+  flex: 1 1 16rem;
+  text-align: center;
+  background: var(--light-bg);
+  padding: 3rem 2rem;
+}
+.about .content .icons-container .icons img {
+  height: 5rem;
+  box-shadow: var(--box-shadow);
+}
+.about .content .icons-container .icons h3 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: var(--light-black);
+  font-weight: normal;
+}
+
+.menu {
+  background: var(--light-bg);
+}
+
+.menu .slide .title {
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--white);
+  background: var(--peru);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.menu .slide .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.menu .slide .box-container .box {
+  flex: 1 1 41rem;
+  background: var(--white);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.menu .slide .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+  padding-bottom: 1rem;
+}
+
+.menu .slide .box-container .box p {
+  font-size: 1.2rem;
+  color: var(--light-black);
+  line-height: 2;
+}
+
+.menu .slide .box-container .box .price {
+  font-size: 2rem;
+  color: var(--peru);
+}
+
+.menu .slide .box-container .box:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.food {
+  background-color: var(--light-bg);
+}
+
+.food .slide {
+  text-align: center;
+  padding: 3rem 2rem;
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.food .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.food .slide img {
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+.food .slide h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: --black;
+}
+
+.food .slide .price {
+  font-size: 2.5rem;
+  color: var(--peru);
+}
+
+.reviews {
+  padding: 5rem 10%;
+  background-color: #f5f5f5;
+  background-image: url("images/crop-plate-with-salad_23-2147753678.avif");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.review-intro {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.reviews h3 {
+  color: #c5b2b2;
+}
+.review {
+  flex: 0 0 calc(33.333% - 20px);
+  padding: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff; /* Review background color */
+}
+
+/* Star rating styles */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.review-container p {
+  font-size: 1.4rem;
+}
+.star-rating i {
+  color: #f8d32e; /* Star color */
+  margin: 0 0.2rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.scrollTop:hover {
+  background-color: #f7f7f7;
+  color: var(--black);
+  border-radius: 100%;
+}
