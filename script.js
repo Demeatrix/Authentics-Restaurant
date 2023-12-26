@@ -14,10 +14,6 @@ menuBtn.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-document.getElementById('menu-btn').addEventListener('click', function() {
-  var navbar = document.querySelector('.header .navbar');
-  navbar.classList.toggle('active');
-});
 
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,

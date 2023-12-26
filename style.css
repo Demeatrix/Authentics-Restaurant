@@ -113,13 +113,26 @@ Line height
 }
 
 html {
-
     font-size: 10px;
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
 }
 
+html::-webkit-scrollbar {
+    width: .50rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--gold-crayola);
+}
+    
+
 body {
-    background-color: var(--eerie-black-1);
+    background-color: var(--white);
     color: var(--white);
     font-family: var(--fontFamily-dm_sans);
     font-size: var(--fontSize-body-4);
@@ -127,7 +140,7 @@ body {
     line-height: var(--lineHeight-5);
     overflow: overlay;
     height: 400vh;
-    background: var(--black);
+    background: var(--white);
 }
 
 
@@ -245,22 +258,11 @@ section {
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--box-shadow);
-    /* background: var(--white); */
-    /* filter: blur(3px); Adjust the blur value as needed */
-    color: #ffff; /* Set the text color */
-    z-index: 1; /* Ensure the content is above the background */
-  }
-  
-  .header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; /* Inherit the background from the header */
-    filter: blur(2px); /* Adjust the blur value as needed */
-    z-index: -1; /* Place the overlay behind the content */
+    position: sticky;
+    top: 0; left: 0; right:0; 
+    background: var(--black-alpha-15);
+    border-radius: 30px;
+    z-index: 1000; /* Ensure the content is above the background */
   }
   
   .header .logo {
@@ -270,24 +272,24 @@ section {
   }
 
   .header .logo i {
-    color: var(--peru);
-    padding-right: 0.5rem;
+    color: rgb(255, 145, 0);
+    padding-right: .5rem;
   }
 
   .header .navbar a {
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--gold-crayola);
+    color: var(--light-black);
   }
 
   .header .navbar a:hover {
-    color: var(--peru);
+    color: rgb(255, 145, 0);
   }
   
   #menu-btn {
     font-size: 2.5rem;
     cursor: pointer;
-    color: var(--white);
+    color: var(--black);
     display: none;
   }
   
@@ -306,7 +308,7 @@ section {
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 768px) {   
     #menu-btn {
       display: inline-block;
     }
@@ -349,8 +351,9 @@ Home Slider
 ---------------------------------------------*/
 
 h2{
-    margin-top: 1.5vw;
-    color: var(--gold-crayola);
+    margin-top: .5rem;
+    text-align: center;
+    color: var(--black);
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 0;
@@ -370,6 +373,7 @@ h2{
 section {
     margin-top: 1vh;
     padding: 2 rem 9%;
+    border-radius: 50px;
 }
 
 /* 
@@ -387,17 +391,55 @@ section {
 } */
 
 
-.btn:hover {
+/* .btn:hover {
     background: var(--white);
+} */
+
+.Home {
+    margin-top: 100px;
+    padding: 0;
 }
 
-.photo1, .photo2, .photo3 {
-        display: flex;
-        margin-top: 5vh;
-        max-width: 100%; 
-        height: auto; 
-        width: 750px; 
-        border-radius: 40px;
+.Home .slider {
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home .slider::before {
+   content: '';
+   position: absolute;
+   top: 0; left: 0;
+   height: 100%;
+   width: 100%;
+   background: var(--dark-bg);
+   z-index: -1;
+}
+
+
+.Home .slider .content {
+    text-align: center;
+    width: 70rem;
+}
+
+.Home .slider .content h2 {
+    font-size: 8vw;
+    display: block;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+}
+
+.Home .slider .content p {
+    font-size: 3rem;
+    display: block;
+    /* text-transform: uppercase; */
+    padding-bottom: 5rem;
 }
 
 .Home, .home-slider .slider {
@@ -490,21 +532,16 @@ a {
 Cuisines Scroller
 ---------------------------------------------*/
 
-img {
-    margin-top: 2px;
-    width:100%;
-    height: 10%;
-}
-
 .bg-cuisine-heading{
     width: 100%;
-    height: 5vh;
+    height: 10vh;
+    margin-top: 100px;
     margin-top: 5px;
     background-color: var(--gold-crayola);
-    border-radius: 100px;
 }
 
 .bg-cuisine-heading h1 {
+    margin-top: 100px;
     text-align: center;
     font-size: 3rem;
     color: #222;
@@ -525,17 +562,19 @@ img {
 }
 
 .cuisines {
-    width: 35vw;
-    height: 75%;
-    /* background: green; */
+    width: 25vw;
+    height: 65%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgba(#ffff);
     margin: 20px;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
     transition: all ease 1s;
+    position: relative;
+    z-index: 0;
 }
+
 
 @media (max-width: 768px) {
     .cuisines {
@@ -561,7 +600,6 @@ img {
 .overlay{
     width: 100%;
     height: 100%;
-    background-color: greenyellow;
     /* content-visibility:hidden; */
     padding-top: 1px;
     opacity: 0;
@@ -569,49 +607,58 @@ img {
 }
 
 .overlay h2 {
-    color: black;
+    color: var(--gold-crayola);
     text-align: center;
-    font-size: 7vmin;
+    font-size: 5vmin;
     margin-top: 0.2px;
     text-transform: uppercase;
 }
 
 .overlay h3 {
-    color: black;
+    color: var(--gold-crayola);
     text-align: center;
     padding-top: 10px;
     font-weight: 800;
-    font-size: 7vmin;
+    font-size: 4vmin;
     margin-top: 65px;
     text-decoration: underline;
 }
 
 .overlay p {
-    color: black;
+    color: var(--white);
     text-align: center;
     padding-top: 10px;
     font-weight: 800;
-    font-size: 3.7vmin;
+    font-size: 2.8vmin;
     margin-top: 30px;
 }
 
 @media (max-width: 768px) {
     .overlay h2 {
-        font-size: 10vmin;
+        font-size: 8vmin;
     }
 }
 
 @media (max-width: 768px) {
     .overlay h3 {
-        font-size: 9vmin;
+        font-size: 7vmin;
         padding-top: 2px;
     }
 }
 
 @media (max-width: 768px) {
     .overlay p {
-        font-size: 5.8vmin;
+        font-size: 4.5vmin;
     }
+}
+
+.cuisines:hover .overlay::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--dark-bg);
+    z-index: -1;
 }
 
 .cuisines:hover .overlay {
