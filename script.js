@@ -15,7 +15,23 @@ menuBtn.onclick = () => {
 };
 
 
-var swiper = new Swiper(".home-slider", {
+const header = document.querySelector('.header');
+const stick = header.offsetTop;
+
+function stick_nav() {
+  if (window.pageYOffset >= stick) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+window.onscroll = function() {
+  stick_nav();
+};
+
+
+var swiper = new swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {

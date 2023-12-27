@@ -6,6 +6,21 @@ menuBtn.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+const header = document.querySelector('.header');
+const stick = header.offsetTop;
+
+function stick_nav() {
+  if (window.pageYOffset >= stick) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+window.onscroll = function() {
+  stick_nav();
+};
+
 var swiper = new Swiper(".food-slider", {
   grabCursor: true,
   loop: true,
@@ -38,6 +53,7 @@ var swiper = new Swiper(".menu-slider", {
     clickable: true,
   },
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const reviewContainer = document.getElementById("review-container");
 

@@ -13,6 +13,7 @@
         height: 100vh;
         display: grid;
         align-items: center;
+        margin: 0;
     }
     
     body::before {
@@ -25,6 +26,12 @@
         background: url(/Assets-Auntentics/assets/images/The-Qualities-of-a-Great-Front-of-House-Manager-768x432.jpg) center/cover;
         filter: blur(3px); /* Adjust the blur value as needed */
         z-index: -1; /* Place the overlay behind the content */
+    }
+
+    @media (max-width: 767px) {
+        body::before {
+           height: 250vh; /* Adjust the percentage or pixel value as needed */
+        }
     }
 
 .contact-in {
@@ -100,6 +107,7 @@
    margin-bottom: 20px;
    padding: 15px;
    font-family: "Alkatra", sans-serif;
+   box-sizing: border-box;
 }
 
 .contact-form-radio-container {
@@ -125,7 +133,13 @@ label {
     color: #000020;
     font-size: 15px;
     font-weight: 800;
+    text-align: center;
 }
+
+.contact-form-textarea::-webkit-scrollbar {
+   display: none;
+}
+
 
 .contact-form-btn {
     width: 100%;
