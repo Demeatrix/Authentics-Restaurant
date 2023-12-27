@@ -55,7 +55,7 @@ section {
 
 .heading h3 {
   font-size: 4.5rem;
-  color: var(--black);
+  /* color: var(--black); */
 }
 
 .header {

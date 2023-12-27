@@ -31,7 +31,8 @@ window.onscroll = function() {
 };
 
 
-var swiper = new swiper(".home-slider", {
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -42,5 +43,6 @@ var swiper = new swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable: true,
     },
-   loop: true,
+    loop: true,
   });
+});
