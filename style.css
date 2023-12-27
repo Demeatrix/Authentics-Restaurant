@@ -3,238 +3,232 @@ Custom Properties
 */
 
 :root {
-    --gold-crayola: hsl(38, 61%, 73%);
-    --quick-silver: hsla(0, 0%, 65%, 1);
-    --davys-grey: hsla(30, 3%, 34%, 1);
-    --smoky-black-1: hsla(40, 12%, 5%, 1);
-    --smoky-black-2: hsla(30, 8%, 5%, 1);
-    --smoky-black-3: hsla(0, 3%, 7%, 1);
-    --eerie-black-1: hsla(210, 4%, 9%, 1);
-    --eerie-black-2: hsla(210, 4%, 11%, 1);
-    --eerie-black-3: hsla(180, 2%, 8%, 1);
-    --eerie-black-4: hsla(0, 0%, 13%, 1);
-    --white: hsla(0, 0%, 100%, 1);
-    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
-    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
-    --black: hsla(0, 0%, 0%, 1);
-    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
-    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
-    --peru: #cd9452;
-    --black: #222;
-    --white: #fff;
-    --light-black: #666;
-    --light-white: #ccc;
-    --light-bg: #f5f5f5;
-    --dark-bg: rgba(0, 0, 0, 0.7);
-    --border: 0.4rem solid #aaa;
-    /* --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
-    /* --box-shadow: 20px 20px 60px #96363641, inset -20px -20px 60px #ffffff40; */
+  --gold-crayola: hsl(38, 61%, 73%);
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: hsla(180, 2%, 8%, 1);
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+  --peru: #cd9452;
+  --black: #222;
+  --white: #fff;
+  --light-black: #666;
+  --light-white: #ccc;
+  --light-bg: #f5f5f5;
+  --dark-bg: rgba(0, 0, 0, 0.7);
+  --border: 0.4rem solid #aaa;
+  /* --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
+  /* --box-shadow: 20px 20px 60px #96363641, inset -20px -20px 60px #ffffff40; */
 
-    /* ----------------------------------------
+  /* ----------------------------------------
 Gradient
 */
-    --loading-text-gradient: linear-gradient(90deg,
-            transparent 0% 16.66%,
-            var(--smoky-black-3) 33.33% 50%,
-            transparent 66.66% 75%);
-    --gradient-1: linear-gradient(to top,
-            hsla(0, 0%, 0%, 0.9),
-            hsla(0, 0%, 0%, 0.7),
-            transparent);
+  --loading-text-gradient: linear-gradient(
+    90deg,
+    transparent 0% 16.66%,
+    var(--smoky-black-3) 33.33% 50%,
+    transparent 66.66% 75%
+  );
+  --gradient-1: linear-gradient(
+    to top,
+    hsla(0, 0%, 0%, 0.9),
+    hsla(0, 0%, 0%, 0.7),
+    transparent
+  );
 
-
-    /*--------------------------------------------
+  /*--------------------------------------------
 Font Fam 
 */
 
-    --fontFamily-forum: "Forum", cursive;
-    --fontFamily-dm_sans: "DM Sans", sans-serif;
+  --fontFamily-forum: "Forum", cursive;
+  --fontFamily-dm_sans: "DM Sans", sans-serif;
 
-    /*----------------------------------------------
+  /*----------------------------------------------
 Font Sizinf 
 */
 
-    --fontSize-display-1: calc(1.3rem + 6.7vw);
-    --fontSize-headline-1: calc(2rem + 2.5vw);
-    --fontSize-headline-2: calc(1.3rem + 2.4vw);
-    --fontSize-title-1: calc(1.6rem + 1.2vw);
-    --fontSize-title-2: 2.2rem;
-    --fontSize-title-3: 2.1rem;
-    --fontSize-title-4: calc(1.6rem + 1.2vw);
-    --fontSize-body-1: 2.4rem;
-    --fontSize-body-2: 1.6rem;
-    --fontSize-body-3: 1.8rem;
-    --fontSize-body-4: 1.6rem;
-    --fontSize-label-1: 1.4rem;
-    --fontSize-label-2: 1.2rem;
+  --fontSize-display-1: calc(1.3rem + 6.7vw);
+  --fontSize-headline-1: calc(2rem + 2.5vw);
+  --fontSize-headline-2: calc(1.3rem + 2.4vw);
+  --fontSize-title-1: calc(1.6rem + 1.2vw);
+  --fontSize-title-2: 2.2rem;
+  --fontSize-title-3: 2.1rem;
+  --fontSize-title-4: calc(1.6rem + 1.2vw);
+  --fontSize-body-1: 2.4rem;
+  --fontSize-body-2: 1.6rem;
+  --fontSize-body-3: 1.8rem;
+  --fontSize-body-4: 1.6rem;
+  --fontSize-label-1: 1.4rem;
+  --fontSize-label-2: 1.2rem;
 
-    /*
+  /*
 Font Weight 
 */
 
-    --weight-regular: 400;
-    --weight-bold: 700;
+  --weight-regular: 400;
+  --weight-bold: 700;
 
-    /*
+  /*
 Line height 
 */
 
+  /* Spacing */
 
-    /* Spacing */
+  --section-space: 70px;
 
-    --section-space: 70px;
+  /* Shadow */
 
-    /* Shadow */
+  --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
 
-    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+  /* Border Radius */
 
-    /* Border Radius */
+  --radius-24: 24px;
+  --radius-circle: 50%;
 
-    --radius-24: 24px;
-    --radius-circle: 50%;
+  /* Transition */
 
-    /* Transition */
-
-    --transition-1: 250ms ease;
-    --transition-2: 500ms ease;
-    --transition-3: 1000ms ease;
-
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --transition-3: 1000ms ease;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
-    text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+  text-transform: capitalize;
+  font-family: "Dosis", sans-serif;
 }
 
 html {
-    font-size: 10px;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 html::-webkit-scrollbar {
-    width: .50rem;
+  width: 0.5rem;
 }
 
-html::-webkit-scrollbar-track{
-    background-color: var(--white);
+html::-webkit-scrollbar-track {
+  background-color: var(--white);
 }
 
-html::-webkit-scrollbar-thumb{
-    background-color: var(--gold-crayola);
+html::-webkit-scrollbar-thumb {
+  background-color: var(--gold-crayola);
 }
-    
 
 body {
-    background-color: var(--white);
-    color: var(--white);
-    font-family: var(--fontFamily-dm_sans);
-    font-size: var(--fontSize-body-4);
-    font-weight: var(--weight-regular);
-    line-height: var(--lineHeight-5);
-    overflow: overlay;
-    height: 350vh;
-    background: var(--white);
+  background-color: var(--white);
+  color: var(--white);
+  /* font-family: var(--fontFamily-dm_sans); */
+  font-size: var(--fontSize-body-4);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-5);
+  overflow: overlay;
+  height: 350vh;
+  background: var(--white);
 }
-
-
 
 /*-----------------------------------------
 Symbol  Properties
 -----------------------------------------*/
-
 
 /*-------------------------------------------------------------------
  Preloader page 
  -------------------------------------------------------------------*/
 
 .preload {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--gold-crayola);
-    z-index: 10;
-    display: grid;
-    place-content: center;
-    justify-items: center;
-    transition: var(--transition-2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gold-crayola);
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  transition: var(--transition-2);
 }
 
 .preload > * {
-    transition: var(--transition-1);
+  transition: var(--transition-1);
 }
 
 .preload.loaded > * {
-    opacity: 0;
+  opacity: 0;
 }
 
 .preload.loaded {
-    transition-delay: 250ms;
-    transform: translateY(100%);
+  transition-delay: 250ms;
+  transform: translateY(100%);
 }
 
 .loader {
-    width: 100px;
-    height: 100px;
-    border-radius: var(--radius-circle);
-    border: 4px solid var(--white);
-    border-block-start-color: var(--smoky-black-3);
-    margin-block-end: 45px;
-    animation: rotate360 1s linear infinite;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-circle);
+  border: 4px solid var(--white);
+  border-block-start-color: var(--smoky-black-3);
+  margin-block-end: 45px;
+  animation: rotate360 1s linear infinite;
 }
-
 
 @keyframes rotate360 {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
 .preload .text {
-    background-image: var(--loading-text-gradient);
-    background-size: 500%;
-    font-size: calc(2rem + 2vw);
-    font-weight: var(--weight-bold);
-    line-height: 1em;
-    text-transform: uppercase;
-    letter-spacing: 14px;
-    padding-inline-start: 18px;
-    -webkit-text-fill-color: Transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 0.5px var(--eerie-black-3);
-    animation: loadingText Linear 2s infinite;
+  background-image: var(--loading-text-gradient);
+  background-size: 500%;
+  font-size: calc(2rem + 2vw);
+  font-weight: var(--weight-bold);
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  padding-inline-start: 18px;
+  -webkit-text-fill-color: Transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5px var(--eerie-black-3);
+  animation: loadingText Linear 2s infinite;
 }
 
 @keyframes loadingText {
-    0% {
-        background-position: 100%;
-    }
-    100% {
-        background-position: 0%;
-    }
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
 }
-
-
 
 /*-------------------------------------------
 TopBar
 -------------------------------------------*/
 
 .topbar {
-    display: none;;
+  display: none;
 }
 
 /*---------------------------------------------
@@ -242,145 +236,143 @@ Header
 ---------------------------------------------*/
 
 section {
-    padding: 5rem 10%;
+  padding: 5rem 10%;
+}
+
+.header {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  top: 0;
+  left: 0;
+  right: 0;
+  /* background: var(--black-alpha-15); */
+  /* border-radius: 30px; */
+  z-index: 1000; /* Ensure the content is above the background */
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.header .logo i {
+  color: rgb(255, 145, 0);
+  padding-right: 0.5rem;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: var(--light-black);
+}
+
+.header .navbar a:hover {
+  color: rgb(255, 145, 0);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--peru);
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 3rem 2rem;
+  }
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
   }
 
-  .header {
-    position: relative;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: var(--box-shadow);
-    top: 0; left: 0; right:0; 
-    background: var(--black-alpha-15);
-    border-radius: 30px;
-    z-index: 1000; /* Ensure the content is above the background */
-  }
-  
-  .header .logo {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: var(--black);
+  .fa-times {
+    transform: rotate(180deg);
   }
 
-  .header .logo i {
-    color: rgb(255, 145, 0);
-    padding-right: .5rem;
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar .active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
   }
 
   .header .navbar a {
-    font-size: 2rem;
-    margin-left: 2rem;
-    color: var(--light-black);
+    display: block;
+    margin: 2rem;
   }
+}
 
-  .header .navbar a:hover {
-    color: rgb(255, 145, 0);
-  }
-  
-  #menu-btn {
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: var(--peru);
-    display: none;
-  }
-  
-  @media (max-width: 1200px) {
-    section {
-      padding: 3rem 5%;
-    }
-  }
-  
-  @media (max-width: 991px) {
-    section {
-      padding: 3rem 2rem;
-    }
-    html {
-      font-size: 55%;
-    }
-  }
-  
-  @media (max-width: 768px) {   
-    #menu-btn {
-      display: inline-block;
-    }
-  
-    .fa-times {
-      transform: rotate(180deg);
-    }
-    
-    .header .navbar {
-      position: absolute;
-      top: 99%;
-      left: 0;
-      right: 0;
-      background-color: var(--white);
-      border-top: var(--border);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-  
-    .header .navbar .active {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* You can adjust the z-index as needed */
+  background: #272727;
+}
 
-    .active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
-      }
-  
-    .header .navbar a {
-      display: block;
-      margin: 2rem;
-    }
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* You can adjust the z-index as needed */
-    background: #272727;
-  }
-  
-  
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
-  }
-
-
-
+}
 
 /*---------------------------------------------
 Home Slider
 ---------------------------------------------*/
 
-h2{
-    margin-top: .5rem;
-    text-align: center;
-    color: var(--black);
-    font-size: 4rem;
-    line-height: 4rem;
-    margin-bottom: 0;
-    animation: fadeIn 3s ease forwards;
+h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 0;
+  animation: fadeIn 3s ease forwards;
 }
 
 @keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        transform: translateY(5rem);
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(5rem);
+  }
 }
 
 section {
-    margin-top: 1vh;
-    padding: 2 rem 9%;
-    border-radius: 50px;
+  margin-top: 1vh;
+  padding: 2 rem 9%;
+  /* border-radius: 50px; */
 }
 
 /* 
@@ -397,281 +389,276 @@ section {
     padding: .5rem 2rem;
 } */
 
-
 /* .btn:hover {
     background: var(--white);
 } */
 
 .Home {
-    margin-top: 100px;
-    padding: 0;
+  margin-top: 100px;
+  padding: 0;
 }
 
 .Home .slider {
-    min-height: 100vh;
-    background-size: cover !important;
-    background-position: center !important;
-    position: relative;
-    z-index: 0;
-    /* border-radius: 50px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  z-index: 0;
+  /* border-radius: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Home .slider::before {
-   content: '';
-   position: absolute;
-   top: 0; left: 0;
-   height: 100%;
-   width: 100%;
-   background: var(--dark-bg);
-   z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--dark-bg);
+  z-index: -1;
 }
 
-
 .Home .slider .content {
-    text-align: center;
-    width: 70rem;
+  text-align: center;
+  width: 70rem;
 }
 
 .Home .slider .content h2 {
-    font-size: 8vw;
-    display: block;
-    text-transform: uppercase;
-    padding-bottom: 3rem;
+  font-size: 8vw;
+  display: block;
+  text-transform: uppercase;
+  padding-bottom: 3rem;
 }
 
 .Home .slider .content p {
-    font-size: 3rem;
-    display: block;
-    /* text-transform: uppercase; */
-    padding-bottom: 5rem;
+  font-size: 2rem;
+  display: block;
+  /* text-transform: uppercase; */
+  padding-bottom: 5rem;
 }
 
-.Home, .home-slider .slider {
-    padding-top: 1.5rem;
+.Home,
+.home-slider .slider {
+  padding-top: 1.5rem;
 }
 
 .Home .home-slider .slider .content,
 .Home .home-slider .slider .image {
-    flex: 1 1 45rem;
+  flex: 1 1 45rem;
 }
 
-
-h2, p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px; /* Adjust the left margin */
-    margin-right: 10px; /* Adjust the right margin */
-    margin-top: 7vh;
-
+h2,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* Adjust the left margin */
+  margin-right: 10px; /* Adjust the right margin */
+  margin-top: 7vh;
 }
 
 a {
-    font-family: "Pacifico" cursive;
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 15;
-    text-decoration: none;
-    font-weight: 1000;
+  /* font-family: "Pacifico" cursive; */
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 15;
+  text-decoration: none;
+  font-weight: 1000;
 }
 
 .Home .home-slider .slider .image {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Home .home-slider .slider .image img {
-    width: 75%;
-    height: auto;
-    border-radius: 5px; /* Add border-radius if desired */
+  width: 75%;
+  height: auto;
+  /* border-radius: 5px; Add border-radius if desired */
 }
 
 .Home .home-slider .slider .content h2 {
-    color: var(--gold-crayola);
-    font-size: 4vh; /* Adjust the base font size for h2 */
+  color: var(--gold-crayola);
+  font-size: 4vh; /* Adjust the base font size for h2 */
 }
 
 .Home .home-slider .slider .content p,
 .Home .home-slider .slider .content a {
-    color: var(--light-color);
-    line-height: 7vh;
-    font-size: 4vh; /* Adjust the base font size for p and a */
-    padding: 2rem 0;
-    opacity: 0.7;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  color: var(--light-color);
+  line-height: 7vh;
+  font-size: 4vh; /* Adjust the base font size for p and a */
+  padding: 2rem 0;
+  opacity: 0.7;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .Home .home-slider .slider .content p {
-    font-family: "Great Vibes";
-    font-size: 5vh;
-    font-weight: 800;
+  /* font-family: "Great Vibes"; */
+  font-size: 5vh;
+  font-weight: 800;
 }
 
 /* Media Queries for Responsive Font Sizes */
 @media screen and (min-width: 600px) {
-    .Home .home-slider .slider .content h2 {
-        font-size: 5vh;
-    }
+  .Home .home-slider .slider .content h2 {
+    font-size: 5vh;
+  }
 
-    .Home .home-slider .slider .content p,
-    .Home .home-slider .slider .content a {
-        font-size: 3vh;
-    }
+  .Home .home-slider .slider .content p,
+  .Home .home-slider .slider .content a {
+    font-size: 3vh;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .Home .home-slider .slider .content h2 {
-        font-size: 5vh;
-    }
+  .Home .home-slider .slider .content h2 {
+    font-size: 5vh;
+  }
 
-    .Home .home-slider .slider .content p,
-    .Home .home-slider .slider .content a {
-        font-size: 3vmax;
-    }
+  .Home .home-slider .slider .content p,
+  .Home .home-slider .slider .content a {
+    font-size: 3vmax;
+  }
 }
-
 
 /*---------------------------------------------
 Cuisines Scroller
 ---------------------------------------------*/
 
 .bg-cuisine-heading {
-    width: 100%;
-    height: 12vh; /* You may adjust this value based on your design */
-    margin-top: 80px; /* Adjust this value based on your design */
-    background-color: var(--gold-crayola);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
+  width: 100%;
+  height: 12vh; /* You may adjust this value based on your design */
+  margin-top: 80px; /* Adjust this value based on your design */
+  background-color: var(--gold-crayola);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
 }
 
 .bg-cuisine-heading h1 {
-    text-align: center;
-    font-size: 6.5vmin;
-    color: #222;
-    text-transform: uppercase;
-    margin: 0; /* Remove default margin for h1 element */
+  text-align: center;
+  font-size: 6.5vmin;
+  color: #222;
+  text-transform: uppercase;
+  margin: 0; /* Remove default margin for h1 element */
 }
 
-
 .card-container {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap:wrap;
-    margin-top: 50px;
-    gap: 10px;
-    box-shadow: 0px 0px 10px 20px rgba(#2f2e2e);
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 10px;
+  box-shadow: 0px 0px 10px 20px rgba(#2f2e2e);
 }
 
 .cuisines {
-    width: 25vw;
-    height: 65%;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px 0px rgba(#ffff);
-    margin: 20px;
-    background-size: cover !important;
-    background-position: center !important;
-    transition: all ease 1s;
-    position: relative;
-    z-index: 0;
+  width: 25vw;
+  height: 65%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(#ffff);
+  margin: 20px;
+  background-size: cover !important;
+  background-position: center !important;
+  transition: all ease 1s;
+  position: relative;
+  z-index: 0;
 }
 
-
 @media (max-width: 768px) {
-    .cuisines {
-        width: 75vw;
-        height: 65vh;
-    }
+  .cuisines {
+    width: 75vw;
+    height: 65vh;
+  }
 }
 
 #cuisine1 {
-    background-image: url(/Assets-Auntentics/assets/images/Indian-Cuisine-Fifth-Best-In-The-World.jpg);
+  background-image: url("/Assets-Auntentics/assets/images/Indian-Cuisine-Fifth-Best-In-The-World.jpg");
 }
 
 #cuisine2 {
-    background-image: url(/Assets-Auntentics/assets/images/american-cuisines.jpg);
+  background-image: url("/Assets-Auntentics/assets/images/american-cuisines.jpg");
 }
 #cuisine3 {
-    background-image: url(/Assets-Auntentics/assets/images/chinese-cuisine-chef-pom-1024x640.png);
+  background-image: url("/Assets-Auntentics/assets/images/chinese-cuisine-chef-pom-1024x640.png");
 }
 #cuisine4 {
-    background-image: url(/Assets-Auntentics/assets/images/italian-cuisines.jpg);
+  background-image: url("/Assets-Auntentics/assets/images/italian-cuisines.jpg");
 }
 
-
-.overlay{
-    width: 100%;
-    height: 100%;
-    /* content-visibility:hidden; */
-    padding-top: 1px;
-    opacity: 0;
-    transition: all ease 1s;
+.overlay {
+  width: 100%;
+  height: 100%;
+  /* content-visibility: hidden; */
+  padding-top: 1px;
+  opacity: 0;
+  transition: all ease 1s;
 }
 
 .overlay h2 {
-    color: var(--gold-crayola);
-    text-align: center;
-    font-size: 5vmin;
-    margin-top: 0.2px;
-    text-transform: uppercase;
+  color: var(--gold-crayola);
+  text-align: center;
+  font-size: 5vmin;
+  margin-top: 0.2px;
+  text-transform: uppercase;
 }
 
 .overlay h3 {
-    color: var(--gold-crayola);
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 800;
-    font-size: 4vmin;
-    margin-top: 65px;
-    text-decoration: underline;
+  color: var(--gold-crayola);
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 4vmin;
+  margin-top: 65px;
+  text-decoration: underline;
 }
 
 .overlay p {
-    color: var(--white);
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 800;
-    font-size: 2.8vmin;
-    margin-top: 30px;
+  color: var(--white);
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 2.8vmin;
+  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
-    .overlay h2 {
-        font-size: 8vmin;
-    }
+  .overlay h2 {
+    font-size: 8vmin;
+  }
 }
 
 @media (max-width: 768px) {
-    .overlay h3 {
-        font-size: 7vmin;
-        padding-top: 2px;
-    }
+  .overlay h3 {
+    font-size: 7vmin;
+    padding-top: 2px;
+  }
 }
 
 @media (max-width: 768px) {
-    .overlay p {
-        font-size: 4.5vmin;
-    }
+  .overlay p {
+    font-size: 4.5vmin;
+  }
 }
 
 .cuisines:hover .overlay::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: var(--dark-bg);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--dark-bg);
+  z-index: -1;
 }
 
 .cuisines:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
