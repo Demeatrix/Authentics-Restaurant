@@ -657,7 +657,7 @@ Cuisines Scroller
 
 @media (max-width: 768px) {
   .overlay p {
-    font-size: 4.5vmin;
+    font-size: 4.2vmin;
   }
 }
 
@@ -738,4 +738,18 @@ Cuisines Scroller
 
 .footer .socials a:hover {
     transform: scale(1.3);
+}
+
+.footer .credits {
+    padding-top: 10px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    word-spacing: 6px;
+    border-top: var(--border);
+    padding-bottom: 10px;
+    border-bottom: var(--border);
+}
+
+.footer .credits a{
+    color: #FF9100;
 }
