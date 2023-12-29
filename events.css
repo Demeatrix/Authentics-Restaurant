@@ -48,12 +48,6 @@ section {
   margin-bottom: 3rem;
 }
 
-/* .sticky {
-  position: fixed;
-  z-index: 1000;
-  background-color: #f8d32e;
-} */
-
 .heading span {
   font-size: 2.5rem;
   color: var(--peru);
@@ -134,6 +128,7 @@ section {
 
   .header .navbar {
     position: absolute;
+    justify-content: center;
     top: 99%;
     left: 0;
     right: 0;
@@ -151,7 +146,11 @@ section {
   }
 
   .header .navbar a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    text-transform: uppercase;
     margin: 2rem;
   }
 }

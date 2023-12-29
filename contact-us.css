@@ -1,38 +1,192 @@
+:root {
+    --peru: #cd9452;
+    --black: #222;
+    --white: #fff;
+    --light-black: #666;
+    --light-white: #ccc;
+    --light-bg: #f5f5f5;
+    --dark-bg: rgba(0, 0, 0, 0.7);
+    --border: 0.4rem solid #aaa;
+    /* --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
+    /* --box-shadow: 20px 20px 60px #96363641, inset -20px -20px 60px #ffffff40; */
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    }
-    
-    body {
-        position: relative; /* Make sure the ::before pseudo-element is positioned relative to the body */
-        font-size: 14px;
-        font-family: "Alkatra";
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        align-items: center;
-        margin: 0;
-    }
-    
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+    text-transform: capitalize;
+    font-family: "Dosis", sans-serif;
+  }
+  
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-color: var(--white);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--gold-crayola);
+  }
+
+body {
+    position: relative;
+    font-size: 14px;
+    font-family: "Alkatra";
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: overlay;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    background: url(/Assets-Auntentics/assets/images/The-Qualities-of-a-Great-Front-of-House-Manager-768x432.jpg) center/cover;
+    filter: blur(3px);
+    /* Adjust the blur value as needed */
+    z-index: -1;
+    /* Place the overlay behind the content */
+}
+
+@media (max-width: 767px) {
     body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(/Assets-Auntentics/assets/images/The-Qualities-of-a-Great-Front-of-House-Manager-768x432.jpg) center/cover;
-        filter: blur(3px); /* Adjust the blur value as needed */
-        z-index: -1; /* Place the overlay behind the content */
+        height: 250vh;
+        /* Adjust the percentage or pixel value as needed */
+    }
+}
+
+
+section {
+    padding: 5rem 5%;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    /* border-radius: 30px; */
+    z-index: 1000;
+    /* Ensure the content is above the background */
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--gold-crayola);
+}
+
+.header .logo i {
+    color: rgb(255, 145, 0);
+    padding-right: 0.5rem;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--light-black);
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: rgb(255, 145, 0);
+    transform: scale(1.1);
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
     }
 
-    @media (max-width: 767px) {
-        body::before {
-           height: 250vh; /* Adjust the percentage or pixel value as needed */
-        }
+    .fa-bars,
+    .fa-times {
+        font-size: 2.5rem;
     }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar .active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    }
+
+    .header .navbar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #f1ebeb;
+    transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
 
 .contact-in {
     background: #E4C590;
@@ -41,11 +195,13 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 15px;
     border-radius: 30px;
-    background-color: rgba(90, 85, 85, 0.8); /* Use RGBA to add transparency */
+    background-color: rgba(90, 85, 85, 0.8);
+    /* Use RGBA to add transparency */
     box-shadow: 0px 0px 10px 0px;
-    backdrop-filter: blur(.5px); /* Add a blur effect */
+    backdrop-filter: blur(.5px);
+    /* Add a blur effect */
 }
 
 .contact-map {
@@ -55,7 +211,7 @@
     flex: 50%;
 }
 
-.contact-map iframe{
+.contact-map iframe {
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -66,18 +222,18 @@
     width: 100%;
     height: auto;
     flex: 50%;
-    text-align:start;
+    text-align: start;
     padding: 30px;
 }
 
-.contact-form h1{
+.contact-form h1 {
     color: #E4C590;
     margin-bottom: 10px;
     font-family: "Alkatra", sans-serif;
     text-align: center;
 }
 
-.contact-form h3{
+.contact-form h3 {
     margin-bottom: 10px;
     font-family: "Alkatra", sans-serif;
     color: #ffff;
@@ -86,7 +242,7 @@
     text-decoration-line: underline;
 }
 
-.contact-form h4{
+.contact-form h4 {
     margin-bottom: 10px;
     color: #E4C590;
     font-family: "Alkatra", sans-serif;
@@ -96,25 +252,30 @@
 }
 
 
-.contact-form-text,.contact-form-email,.contact-form-textarea,.contact-form-number {
+.contact-form-text,
+.contact-form-email,
+.contact-form-textarea,
+.contact-form-number {
     width: 100%;
     height: 40px;
     color: #ffff;
-   border: 3px solid #bcbcbc;
-   border-radius: 50px;
-   outline: none;
-   margin-top: 10px;
-   margin-bottom: 20px;
-   padding: 15px;
-   font-family: "Alkatra", sans-serif;
-   box-sizing: border-box;
+    border: 3px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: "Alkatra", sans-serif;
+    box-sizing: border-box;
 }
 
 .contact-form-radio-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     /* padding: 1px; */
-  }
+}
 
 label {
     display: flex;
@@ -125,11 +286,14 @@ label {
     color: #E4C590;
     font-size: 3vh;
     font-weight: 800;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 
-.contact-form-text, .contact-form-email, .contact-form-number, .contact-form-textarea::placeholder {
+.contact-form-text,
+.contact-form-email,
+.contact-form-number,
+.contact-form-textarea::placeholder {
     color: #000020;
     font-size: 15px;
     font-weight: 800;
@@ -137,7 +301,7 @@ label {
 }
 
 .contact-form-textarea::-webkit-scrollbar {
-   display: none;
+    display: none;
 }
 
 
@@ -156,7 +320,6 @@ label {
 }
 
 .contact-form-btn:hover {
-    background: #953737;
+    background: #0dc528;
+    transition: 0.5s ease;
 }
-
-

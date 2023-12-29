@@ -62,7 +62,7 @@ section {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--box-shadow);
@@ -89,6 +89,8 @@ section {
   font-size: 2rem;
   margin-left: 2rem;
   color: var(--light-black);
+  font-weight: 1000;
+  text-transform: uppercase;
 }
 
 .header .navbar a:hover {
@@ -145,7 +147,9 @@ section {
   }
 
   .header .navbar a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 2rem;
   }
 }
