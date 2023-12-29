@@ -370,6 +370,7 @@ section {
   right: 30px;
   padding: 10px 15px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .scrollTop:hover {
