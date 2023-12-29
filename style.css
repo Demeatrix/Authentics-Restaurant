@@ -270,6 +270,7 @@ section {
     font-size: 2rem;
     margin-left: 2rem;
     color: var(--light-black);
+    text-align: left;
   }
   
   .header .navbar a:hover {
