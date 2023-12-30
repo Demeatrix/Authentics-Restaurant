@@ -262,6 +262,7 @@ section {
     font-size: 2rem;
     margin-left: 2rem;
     color: var(--light-black);
+    
   }
   
   .header .navbar a:hover {

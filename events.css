@@ -49,6 +49,12 @@ section {
   margin-bottom: 3rem;
 }
 
+/* .sticky {
+  position: fixed;
+  z-index: 1000;
+  background-color: #f8d32e;
+} */
+
 .heading span {
   font-size: 2.5rem;
   color: var(--peru);
@@ -58,34 +64,28 @@ section {
   font-size: 4.5rem;
   color: var(--black);
 }
-
 .header {
-  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--box-shadow);
+  /* position: sticky; */
   top: 0;
   left: 0;
   right: 0;
-  background: var(--black-alpha-15);
-  /* border-radius: 30px; */
-  z-index: 1000; /* Ensure the content is above the background */
+  z-index: 1000;
 }
-
 .header .logo {
   font-size: 2rem;
   font-weight: bolder;
   color: var(--black);
 }
-
 .header .logo i {
-  color: rgb(255, 145, 0);
+  color: var(--peru);
   padding-right: 0.5rem;
 }
-
 .header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
@@ -93,9 +93,8 @@ section {
   text-transform: uppercase;
   color: var(--black);
 }
-
 .header .navbar a:hover {
-  color: rgb(255, 145, 0);
+  color: var(--peru);
 }
 
 #menu-btn {
@@ -128,11 +127,9 @@ section {
   .fa-times {
     transform: rotate(180deg);
   }
-
   .header .navbar {
     position: absolute;
-    justify-content: center;
-    top: 99%;
+    top: 10%;
     left: 0;
     right: 0;
     background-color: var(--white);
@@ -140,31 +137,14 @@ section {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
-  .header .navbar .active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
-  }
-
   .header .navbar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 1000;
-    text-transform: uppercase;
+    display: block;
     margin: 2rem;
   }
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* You can adjust the z-index as needed */
-  background: #f1ebeb;
-  transition: 0.5s ease-in-out;
+.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
 }
 
 @media (max-width: 450px) {
@@ -177,7 +157,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
 }
 
 .event-img {
@@ -221,15 +200,16 @@ section {
 }
 .package-details {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 5rem;
-  font-size: 1.4rem;
 }
 
 .package {
   width: 25%;
   padding: 2.5rem;
-  border: 0.2rem solid #aaa; /* Light gray border */
+  margin-bottom: 2rem;
+  border: 0.2rem solid #aaa;
   border-radius: 0.5rem;
   text-align: left;
   transition: transform 0.3s ease-in-out;
@@ -240,7 +220,7 @@ section {
 }
 
 h4 {
-  color: #cd9452; /* Peru color */
+  color: #cd9452;
   margin-bottom: 1rem;
   font-size: 1.7rem;
 }
@@ -260,6 +240,99 @@ li {
 .price {
   display: block;
   font-size: 2rem;
-  color: #222; /* Black color */
+  color: #222;
   font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .package {
+    width: 30%;
+  }
+}
+
+@media (max-width: 991px) {
+  .package {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .package {
+    width: 100%;
+  }
+}
+.footer {
+  margin-top: 100px;
+  text-align: center;
+  background: #000;
+  color: white;
+}
+
+.footer .icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2.5rem;
+}
+
+.footer .icons-container .icons {
+  text-align: center;
+  padding: 2rem 1.2rem;
+}
+
+.footer .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background: #ff9100;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 6rem;
+  font-size: 2rem;
+}
+
+.footer .icons-container .icons h3 {
+  font-size: 2rem;
+  color: #cd9452;
+}
+
+.footer .icons-container .icons a {
+  font-size: 1.7rem;
+  color: white;
+  line-height: 5rem;
+}
+
+.footer .icons-container .icons a:hover {
+  transform: scale(1.3);
+}
+
+.footer .socials {
+  margin: 2rem 0;
+}
+
+.footer .socials a {
+  height: 5rem;
+  width: 7rem;
+  line-height: 8rem;
+  color: #ff9100;
+  margin: 0 0.3rem;
+  font-size: 3rem;
+}
+
+.footer .socials a:hover {
+  transform: scale(1.3);
+}
+
+.footer .credits {
+  padding-top: 10px;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  word-spacing: 6px;
+  border-top: var(--border);
+  padding-bottom: 10px;
+  border-bottom: var(--border);
+}
+
+.footer .credits a {
+  color: #ff9100;
 }
