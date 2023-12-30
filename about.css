@@ -82,14 +82,14 @@ section {
 }
 
 .header .logo i {
-  color: rgb(255, 145, 0);
+  color: var(--peru);
   padding-right: 0.5rem;
 }
 
 .header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
-  color: var(--light-black);
+  color: var(--black);
   font-weight: 1000;
   text-transform: uppercase;
 }
@@ -365,17 +365,26 @@ section {
   font-size: 1.4rem;
 }
 
-.scrollTop {
+.to-top {
+  background: white;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1;
+  bottom: 75px;
+  right: 15px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
 }
 
-.scrollTop:hover {
-  background-color: #f7f7f7;
-  color: var(--black);
-  border-radius: 100%;
-}
+  .to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+  }

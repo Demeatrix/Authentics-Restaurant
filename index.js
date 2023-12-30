@@ -107,6 +107,12 @@ function generateStarRating(rating) {
   return stars + emptyStars;
 }
 
-function scrollToTop() {
-  window.scrollTo(0, 0);
-}
+const toTop = document.querySelector(".to-top");
+window.addEventListener("scroll", () => {
+  if(window.pageYOffset > 1500) {
+    toTop.classList.add("active");
+  }
+    else{
+      toTop.classList.remove("active");
+    }
+})
