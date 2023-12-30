@@ -7,6 +7,7 @@
     --light-bg: #f5f5f5;
     --dark-bg: rgba(0, 0, 0, 0.7);
     --border: 0.4rem solid #aaa;
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
     /* --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
     /* --box-shadow: 20px 20px 60px #96363641, inset -20px -20px 60px #ffffff40; */
 }
@@ -56,6 +57,7 @@ body {
 }
 
 body::before {
+    margin-top: 100px;
     content: "";
     position: absolute;
     top: 0;
@@ -64,29 +66,27 @@ body::before {
     height: 150vh;
     background: url(/Assets-Auntentics/assets/images/The-Qualities-of-a-Great-Front-of-House-Manager-768x432.jpg) center/cover;
     filter: blur(3px);
-    /* Adjust the blur value as needed */
     z-index: -1;
-    /* Place the overlay behind the content */
 }
 
 @media (max-width: 767px) {
     body::before {
         height: 250vh;
-        /* Adjust the percentage or pixel value as needed */
     }
 }
 
 
 section {
     padding: 5rem 5%;
+    /* margin-bottom: 100px; */
 }
 
 .header {
     width: 100%;
     height: 10vh;
     position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,14 +94,12 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--white);
-    /* border-radius: 30px; */
+    background: var(--black-alpha-15);
     z-index: 1000;
-    /* Ensure the content is above the background */
 }
 
 .header .logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bolder;
     color: var(--gold-crayola);
 }
@@ -114,7 +112,7 @@ section {
 .header .navbar a {
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--light-black);
+    color: var(--black);
     font-weight: 1000;
     text-transform: uppercase;
 }
@@ -205,7 +203,6 @@ section {
 }
 
 .contact-map {
-    /* background: #E4C590; */
     width: 100%;
     height: auto;
     flex: 50%;
@@ -224,6 +221,10 @@ section {
     flex: 50%;
     text-align: start;
     padding: 30px;
+}
+
+.contact-in {
+    margin-top: 120px;
 }
 
 .contact-form h1 {
@@ -254,12 +255,12 @@ section {
 
 .contact-form-text,
 .contact-form-email,
-.contact-form-textarea,
 .contact-form-number {
+    margin-top: 100px;
     width: 100%;
     height: 40px;
     color: #ffff;
-    border: 3px solid #bcbcbc;
+    border: 3px solid rgba(90, 85, 85, 0.8);
     border-radius: 50px;
     outline: none;
     margin-top: 10px;
@@ -292,20 +293,17 @@ label {
 
 .contact-form-text,
 .contact-form-email,
-.contact-form-number,
-.contact-form-textarea::placeholder {
-    color: #000020;
+.contact-form-number::placeholder {
+    margin-top: 10px;
+    color: rgba(90, 85, 85, 0.8);
     font-size: 15px;
     font-weight: 800;
     text-align: center;
 }
 
-.contact-form-textarea::-webkit-scrollbar {
-    display: none;
-}
-
 
 .contact-form-btn {
+    margin-top: 15px;
     width: 100%;
     border: none;
     outline: none;
@@ -316,7 +314,8 @@ label {
     padding: 10px 0;
     cursor: pointer;
     font: 35px;
-    font-weight: 600;
+    font-weight: 1000;
+    font-size: 2rem;
 }
 
 .contact-form-btn:hover {
